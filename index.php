@@ -1,5 +1,7 @@
 <?php
-$text="Correva l&#39; anno 1994 quando Rasmus Lerdorf, giovane programmatore groenlandese, ipotizzò un nuovo linguaggio di programmazione per rendere le pagine web più dinamiche: l&#39 8 giugno 1995 presentò la prima versione di PHP.";
+$text="Correva l&#39; anno 1994 quando Rasmus Lerdorf, giovane programmatore groenlandese, ipotizzò un nuovo linguaggio di programmazione per rendere le pagine web più dinamiche: l&#39 8 giugno 1995 presentò la prima versione di PHP .";
+$word = $_GET['PHP'];
+$text2 = str_replace($word, "***", $text);
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +15,10 @@ $text="Correva l&#39; anno 1994 quando Rasmus Lerdorf, giovane programmatore gro
 <body>
     <!-- stampa paragrafo e lunghezza per intero -->
     <p><?php echo $text ?></p>
-    <h4><?php echo strlen($text) ?></h4>
-    
+    <h4>Lunghezza:<?php echo strlen($text); ?></h4>
+
+    <!-- stampa paragrafo con parola censurata -->
+    <p><?php echo $text2 ?></p>
+    <h4>Lunghezza: <?php echo strlen($text2); ?></h4>
 </body>
 </html>
