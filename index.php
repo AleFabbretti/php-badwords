@@ -1,6 +1,6 @@
 <?php
 $text="Correva l&#39; anno 1994 quando Rasmus Lerdorf, giovane programmatore groenlandese, ipotizzò un nuovo linguaggio di programmazione per rendere le pagine web più dinamiche: l&#39 8 giugno 1995 presentò la prima versione di PHP .";
-$word = $_GET['badword'];
+$word = isset($_GET['badword']) ? $_GET['badword'] : '';
 $text2 = str_replace($word, "***", $text);
 ?>
 
